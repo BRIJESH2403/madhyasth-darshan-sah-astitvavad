@@ -2,61 +2,76 @@
 
 export default function Chart01() {
   return (
-    <div className="w-[900px] h-[500px] flex gap-6 p-6">
-
-      {/* LEFT SIDE */}
-      <div className="w-1/2 flex flex-col gap-4">
-
-        <div className="border rounded-lg p-4 text-center">
-          <h2 className="text-red-500 font-semibold">अस्तित्व दर्शन</h2>
-          <p className="text-sm mt-2">
-            व्यवहार जगत में मनुष्य एक सचेतन इकाई है
-          </p>
+    <div className="relative w-[1448px] mx-auto p-10 font-sans">
+      
+      {/* Top Section */}
+      <div className="flex gap-[90px] items-center justify-center mb-[168px]">
+        
+        <div className="card-green w-[360px] text-center">
+          ज्ञान स्वयं क्रिया न करते हुए अथवा क्रिया न होते हुए मानव जीवन में अनुभव स्थिति में आनन्द सहज वैभव प्रमाण है
         </div>
 
-        <div className="grid grid-cols-3 gap-3">
-          <div className="border p-3 rounded text-center">भीमा</div>
-          <div className="border p-3 rounded text-center">दुख</div>
-          <div className="border p-3 rounded text-center">मिला</div>
+        <div className="card-peach w-[350px] text-center">
+          <p className="text-primary text-2xl">ज्ञान</p>
+          <p>(ज्ञान अथवा शून्य से रिक्त और मुक्त इकाई नहीं है)</p>
         </div>
 
-        <div className="border p-4 rounded text-center">
-          सह अस्तित्व (जीवन का आधार)
+        <div className="card-green w-[360px] text-center">
+          अनुभव पूर्वक अभिव्यक्ति ही ज्ञान है। ज्ञान ही जागृत मानव में सकारात्मक क्रियाओं का आधार अथवा प्रेरणा स्रोत है
         </div>
-
       </div>
 
-      {/* RIGHT SIDE */}
-      <div className="w-1/2 flex flex-col gap-4">
-
-        <div className="border rounded-lg p-4 text-center">
-          <h2 className="text-red-500 font-semibold">
-            सह अस्तित्व में मानव
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4">
-
-          <div className="border p-4 rounded text-center">
-            मानव
-          </div>
-
-          <div className="border p-4 rounded text-center">
-            जीवनचर्या
-          </div>
-
-          <div className="border p-4 rounded text-center">
-            प्राणावस्था
-          </div>
-
-          <div className="border p-4 rounded text-center">
-            पदार्थावस्था
-          </div>
-
-        </div>
-
+      {/* Line */}
+      <div className="relative h-8 w-full mb-10">
+        <div className="absolute top-1/2 w-full h-[4px] bg-yellow-400" />
       </div>
 
+      {/* 8 Cards */}
+      <div className="flex gap-6 mb-[86px]">
+        {[
+          ["अनुभव काल में", "आनंद"],
+          ["सर्वत्र एक सा अनुभव में आने के कारण", "ईश्वर"],
+          ["ज्ञान में समस्त क्रियायें नियंत्रित", "लोकेश"],
+          ["सर्वत्र एक सा विद्यमान", "व्यापक"],
+          ["चैतन्य के साथ", "चेतना"],
+          ["आत्मा से सूक्ष्मतम", "परमात्मा"],
+          ["सक्रिय रहने के कारण", "निरपेक्ष ऊर्जा"],
+          ["अपरिणामि ता के कारण", "पूर्ण"],
+        ].map((item, i) => (
+          <div key={i} className="card-peach w-40 h-[230px] text-center flex flex-col justify-center">
+            <p>{item[0]}</p>
+            <p className="text-primary font-bold mt-2">{item[1]}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom Section */}
+      <div className="flex gap-[78px] justify-center mb-14">
+        
+        <div className="card-purple w-[300px] text-center">
+          सत्ता में डूबा, भीगा, घिरा हुआ जड़-चैतन्य प्रकृति है...
+        </div>
+
+        <div className="card-green w-[600px] text-center">
+          <p><span className="text-primary">(ज्ञान)</span> व्यापक सत्ता...</p>
+          <p>विचार काल में <span className="text-primary">समाधान</span></p>
+          <p>अनुभव काल में <span className="text-primary">आनंद</span></p>
+        </div>
+
+        <div className="card-purple w-[300px] text-center">
+          <p className="text-primary font-bold">नित्य</p>
+          <p>सदा-सदा एक सा विद्यमान</p>
+        </div>
+      </div>
+
+      {/* Bottom Text */}
+      <div className="card-peach text-center mb-10">
+        ज्ञान ही शून्य और शून्य ही ज्ञान है...
+      </div>
+
+      <div className="card-purple text-center">
+        अस्तित्व मूलक मानव केंद्रित चिंतन...
+      </div>
     </div>
   )
 }

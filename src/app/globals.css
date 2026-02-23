@@ -319,3 +319,29 @@ h4 {
 .card-bg-hover:hover {
   background-color: var(--color-bg-1);
 }
+
+
+.card-peach {
+  border: 2px solid #fedabc;
+  background: rgba(255, 243, 233, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card-green {
+  border: 2px solid #b3e8be;
+  background: rgba(230, 247, 233, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card-purple {
+  border: 2px solid #e0e0ff;
+  background: rgba(245, 245, 255, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.text-primary {
+  color: #a93b40;
+}

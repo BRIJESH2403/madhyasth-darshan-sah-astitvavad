@@ -6,11 +6,15 @@ import CtaButton from "@/components/ui/CTAButton";
 export default function HeroSection() {
   return (
     <section className="relative w-full min-h-screen xl:h-screen overflow-hidden">
-      <img
-        src="/HeroPageBG/Galaxy to human gif.gif"
-        alt="Hero Background"
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
-      />
+      >
+        <source src="/Herobg.mp4" type="video/mp4" />
+      </video>
 
       <div className="absolute inset-0 bg-black/40" />
 
