@@ -7,7 +7,7 @@ export default function ChartTabs() {
   const [active, setActive] = useState(0)
 
   return (
-    <div className="flex border-b border-(--border-color) light-bg-1">
+    <div className="flex bg-(--color-bg-1)">
       {tabs.map((tab, index) => (
         <button
           key={index}

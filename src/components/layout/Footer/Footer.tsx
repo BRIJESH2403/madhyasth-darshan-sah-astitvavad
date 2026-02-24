@@ -192,7 +192,7 @@ const Footer: React.FC = () => {
 
         {/* ================= BOTTOM ================= */}
         <div className="mt-16 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="!text-[18px] !text-white/80 leading-relaxed">
+          <p className="text-[18px]! text-white/80! leading-relaxed">
             © 2025 मध्यस्थ दर्शन सह-अस्तित्ववाद, सर्वाधिकार सुरक्षित।
           </p>
 

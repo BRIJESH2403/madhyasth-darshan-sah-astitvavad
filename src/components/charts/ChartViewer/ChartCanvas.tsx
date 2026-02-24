@@ -38,7 +38,7 @@ export default function ChartCanvas({ chartId }: Props) {
       </div>
     )
 
-  // 🔥 RAF Optimized Update
+  //  RAF Optimized Update
   const updatePosition = (x: number, y: number) => {
     if (frame.current) cancelAnimationFrame(frame.current)
 
@@ -70,7 +70,7 @@ export default function ChartCanvas({ chartId }: Props) {
   }
 
   return (
-    <div className="w-full h-150 light-bg-1 relative overflow-hidden">
+    <div className="w-full h-150 bg-(--color-bg-1) relative overflow-hidden">
       <div
         className="w-full h-full cursor-grab active:cursor-grabbing"
         onMouseDown={handleMouseDown}

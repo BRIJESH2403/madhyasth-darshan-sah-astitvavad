@@ -39,7 +39,7 @@ export default async function ChartDetailPage({
 
       <ChartHeader title={formattedSlug} />
 
-      <section className="light-bg-2 min-h-screen flex justify-center items-center">
+      <section className="bg-(--color-bg-2) min-h-screen flex justify-center items-center">
         <div className="w-full mx-60 mb-20 rounded-2xl bg-white shadow-lg flex flex-col overflow-hidden">
 
           <ChartTabs />

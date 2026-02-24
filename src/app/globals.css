@@ -315,3 +315,57 @@ p, span, li {
 .faq-collapse .ant-collapse-item-active {
   box-shadow: none !important;
 }
+
+
+/* ===============================
+   CHART THEME (LIGHT MODE)
+================================= */
+.chart-theme {
+  --chart-bg: #ffffff;
+
+  /* TEXT COLORS */
+  --chart-text: #222222;
+  --chart-primary: #a93b40;
+
+  /* OPTIONAL (keep if needed later) */
+  --chart-yellow: #ffc50f;
+
+  --chart-blue-light: #d4eaef;
+  --chart-blue: #7fc1ce;
+
+  --chart-purple-light: #f5f5ff;
+  --chart-purple: #e0e0ff;
+
+  --chart-orange-light: #fff3e9;
+  --chart-orange: #fedabc;
+
+  --chart-green-light: #e6f7e9;
+  --chart-green: #b3e8be;
+}
+
+
+/* ===============================
+   CHART THEME (DARK MODE)
+================================= */
+body.dark-mode .chart-theme {
+  --chart-bg: #000000;
+
+  /* TEXT COLORS (SWAPPED) */
+  --chart-text: #f7f7f7;
+  --chart-primary: #ffc50f;
+
+  /* KEEP SAME (UI consistency) */
+  --chart-yellow: #ffc50f;
+
+  --chart-blue-light: #d4eaef;
+  --chart-blue: #7fc1ce;
+
+  --chart-purple-light: #f5f5ff;
+  --chart-purple: #e0e0ff;
+
+  --chart-orange-light: #fff3e9;
+  --chart-orange: #fedabc;
+
+  --chart-green-light: #e6f7e9;
+  --chart-green: #b3e8be;
+}
