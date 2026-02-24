@@ -8,7 +8,7 @@ interface BreadcrumbItem {
 
 export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <div className="w-full light-bg-1 border-b border-[var(--border-color)] py-4 px-6">
+    <div className="w-full light-bg-1 border-b border-(--border-color) py-4 px-6">
       <div className="container flex flex-wrap items-center">
 
         {items.map((item, index) => {
@@ -20,7 +20,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className="transition hover:text-[var(--color-text-title)]"
+                  className="transition hover:text-(--color-text-title)"
                   style={{
                     fontFamily: "var(--font-primary)",
                     fontWeight: 600,
@@ -40,8 +40,8 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
                   }}
                   className={`${
                     isLast
-                      ? "text-[var(--color-primary)]"
-                      : "text-[var(--color-text-body)]"
+                      ? "text-(--color-primary)"
+                      : "text-(--color-text-body)"
                   }`}
                 >
                   {item.label}
@@ -49,7 +49,7 @@ export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
               )}
 
               {!isLast && (
-                <span className="mx-2 text-[var(--color-text-muted)]">
+                <span className="mx-2 text-(--color-text-muted)">
                   &gt;
                 </span>
               )}

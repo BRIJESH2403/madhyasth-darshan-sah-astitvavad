@@ -50,7 +50,7 @@ const resources = [
 
 export default function ResourcesSection() {
   return (
-    <section className="light-bg-1 dark-bg-1 py-16">
+    <section className="bg-(--color-bg-1) py-16">
       <div className="container">
         <h2 className="text-center mb-12">दस सोपानीय व्यवस्था और समाज व्यवस्था आयाम</h2>
 

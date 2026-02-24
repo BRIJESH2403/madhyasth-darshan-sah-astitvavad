@@ -92,7 +92,7 @@ export default function HeroSection({
 
           {/* ✅ HARDCODED TITLE */}
           <h2 className="mb-4">
-            <span className="primary-color">चार्ट </span>
+            <span className="text-(--color-primary)!">चार्ट </span>
             <span className="body-white">संग्रह</span>
           </h2>
 

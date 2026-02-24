@@ -10,7 +10,7 @@ type Props = {
 }
 
 export default function ChartCanvas({ chartId }: Props) {
-  const [scale, setScale] = useState(1)
+  const [scale, setScale] = useState(0.5)
   const [positionState, setPositionState] = useState({ x: 0, y: 0 })
 
   const positionRef = useRef({ x: 0, y: 0 })
@@ -70,7 +70,7 @@ export default function ChartCanvas({ chartId }: Props) {
   }
 
   return (
-    <div className="w-full h-[600px] light-bg-1 relative overflow-hidden">
+    <div className="w-full h-150 light-bg-1 relative overflow-hidden">
       <div
         className="w-full h-full cursor-grab active:cursor-grabbing"
         onMouseDown={handleMouseDown}

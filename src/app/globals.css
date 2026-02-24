@@ -1,80 +1,8 @@
 @import "tailwindcss";
 
-/* ≤1536px (large laptops) */
-@media (max-width: 1536px) {
-  h1 {
-    font-size: 48px;
-    line-height: 72px;
-  }
-
-  h2 {
-    font-size: 40px;
-    line-height: 56px;
-  }
-}
-
-@media (max-width: 640px) {
-  .body-xl {
-    font-size: 22px;
-    line-height: 120%;
-  }
-}
-
-/* ≤1024px (tablet) */
-@media (max-width: 1024px) {
-  h1 {
-    font-size: 38px;
-    line-height: 54px;
-  }
-
-  h2 {
-    font-size: 32px;
-    line-height: 46px;
-  }
-
-  .body-lg {
-    font-size: 17px;
-    line-height: 28px;
-  }
-}
-
-/* ≤640px (mobile) */
-@media (max-width: 640px) {
-  h1 {
-    font-size: 30px;
-    line-height: 42px;
-  }
-
-  h2 {
-    font-size: 26px;
-    line-height: 38px;
-  }
-
-  .body-lg {
-    font-size: 16px;
-    line-height: 26px;
-  }
-}
-
-/* LAYOUT CONTAINER  */
-
-.container {
-  width: 100%;
-  max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-/* Large screens */
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1440px;
-  }
-}
-
-/*  ROOT VARIABLES */
+/* ===============================
+   ROOT VARIABLES (DEFAULT DESKTOP)
+================================= */
 :root {
   --font-primary: "Noto Sans Devanagari", sans-serif;
 
@@ -97,95 +25,70 @@
 
   --body-2xl-size: 36px;
   --body-2xl-line: 38px;
+
   --body-xl-size: 28px;
   --body-xl-line: 100%;
-  --body-xl-weight: 700;
+  --body-xl-weight: 400;
+
   --body-lg-size: 20px;
   --body-lg-line: 35px;
+
   --body-md-size: 18px;
   --body-md-line: 28px;
-  --body-md-weight: 600;
+  --body-md-weight: 300;
+
   --body-sm-size: 16px;
   --body-xs-size: 14px;
 
-  /* LIGHT COLORS */
-  --color-primary: #ffc50f;
+  --body-line: 28px;
 
+  /* COLORS */
+  --color-primary: #ffc50f;
   --color-text-title: #222222;
   --color-text-body: #414141;
   --color-text-muted: #cfcfcf;
-
   --color-bg-1: #fdfdfd;
   --color-bg-2: #f7f7f7;
-
   --navbar-bg: #ffffff;
   --menu-bg: #ffffff;
   --border-color: #e5e5e5;
 }
 
-/* DARK MODE */
+.primary-color {
+  color: var(--color-primary) !important;
+}
+
+/* ===============================
+   DARK MODE
+================================= */
 body.dark-mode {
   --color-text-title: #f7f7f7;
   --color-text-body: #c0c0c0;
   --color-text-muted: #9a9a9a;
-
   --color-bg-1: #0e0e0e;
   --color-bg-2: #161616;
-
   --navbar-bg: #0e0e0e;
   --menu-bg: #161616;
   --border-color: #262626;
+  --text-primary: #ffc50f;
 }
 
-/*BASE STYLES*/
+/* ===============================
+   BASE
+================================= */
 body {
   font-family: var(--font-primary);
   font-size: var(--body-md-size);
-  line-height: var(--body-md-line);
+  line-height: var(--body-line);
   color: var(--color-text-body);
   background-color: var(--color-bg-1);
 }
 
-/* HEADINGS */
-h1,
-h2,
-h3,
-h4 {
-  color: var(--color-text-title);
-}
-
-/* TEXT */
-p,
-span,
-li {
-  color: var(--color-text-body);
-}
-
-/* MUTED */
-.body-muted {
-  color: var(--color-text-muted);
-}
-
-/* BACKGROUNDS */
-.light-bg-1 {
-  background-color: var(--color-bg-1);
-}
-
-.dark-bg-1 {
-  background-color: var(--color-bg-1);
-}
-
-.light-bg-2 {
-  background-color: var(--color-bg-2);
-}
-
-.dark-bg-2 {
-  background-color: var(--color-bg-2);
-}
-
-/* PRIMARY */
-.primary-color {
-  color: var(--color-primary);
+/* ===============================
+   HEADINGS
+================================= */
+h1, h2, h3, h4 {
+  color: inherit;
 }
 
 h1 {
@@ -212,7 +115,16 @@ h4 {
   font-weight: var(--h4-weight);
 }
 
-/* BODY TEXT SIZES */
+
+/* ===============================
+   TEXT
+================================= */
+p, span, li {
+  color: var(--color-text-body);
+  line-height: var(--body-line);
+}
+
+/* BODY TEXT CLASSES */
 .body-2xl {
   font-size: var(--body-2xl-size);
   line-height: var(--body-2xl-line);
@@ -232,7 +144,7 @@ h4 {
 .body-md {
   font-size: var(--body-md-size);
   line-height: var(--body-md-line);
-  font-weight: var(--body-weight);
+  font-weight: var(--body-md-weight);
 }
 
 .body-sm {
@@ -247,101 +159,159 @@ h4 {
   color: #ffffff;
 }
 
-/* FAQ ACCORDION CARD STYLE */
-.faq-collapse > .ant-collapse-item {
-  margin-bottom: 32px;
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: var(--color-bg-1);
-  border: none;
+/* ===============================
+   LAYOUT CONTAINER
+================================= */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* remove last item gap */
-.faq-collapse > .ant-collapse-item:last-child {
-  margin-bottom: 0;
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1440px;
+  }
 }
 
-/* remove default antd border */
-.faq-collapse {
-  border: none;
+/* ===============================
+   RESPONSIVE TYPOGRAPHY
+   (IMPORTANT: ALWAYS AT BOTTOM)
+================================= */
+
+/* ≤1536px */
+@media (max-width: 1536px) {
+  :root {
+    --h1-size: 48px;
+    --h1-line: 72px;
+
+    --h2-size: 36px;
+    --h2-line: 56px;
+  }
 }
 
-/* antd css variables override */
-.css-var-root.ant-collapse {
-  --ant-collapse-content-bg: var(--color-bg-1);
-  --ant-collapse-header-bg: var(--color-bg-2);
+/* ≤1024px */
+@media (max-width: 1024px) {
+  :root {
+    --h1-size: 38px;
+    --h1-line: 54px;
+
+    --h2-size: 32px;
+    --h2-line: 46px;
+
+    --body-lg-size: 17px;
+    --body-lg-line: 28px;
+
+    --body-line: 26px;
+  }
 }
 
-/* custom header padding */
-:where(.css-dev-only-do-not-override-tchc97).ant-collapse
-  > .ant-collapse-item
-  > .ant-collapse-header {
-  padding: var(--ant-collapse-header-padding);
-  padding: 24px 16px;
+/* ≤640px */
+@media (max-width: 640px) {
+  :root {
+    --h1-size: 30px;
+    --h1-line: 42px;
+
+    --h2-size: 26px;
+    --h2-line: 38px;
+
+    --body-lg-size: 16px;
+    --body-lg-line: 26px;
+
+    --body-xl-size: 22px;
+
+    --body-line: 24px;
+  }
 }
 
-/* FOOTER (ALWAYS DARK) */
+/* ===============================
+   FORCE OVERRIDE ANTD (FINAL FIX)
+================================= */
 
-.footer-dark {
-  background-color: #0b0b0b;
+.faq-collapse.ant-collapse {
+  background: var(--color-bg-2) !important;
+  border: none !important;
+  padding: 10px;
 }
 
-.footer-text {
-  color: #ffffff;
+/* ===============================
+   CARD STYLE (MAIN FIX)
+================================= */
+
+.faq-collapse .ant-collapse-item {
+  border: none !important;
+  margin-bottom: 16px !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background-color: var(--color-bg-1) !important;
 }
 
-.footer-subheading {
-  color: #c0c0c0;
+/* ===============================
+   HEADER (QUESTION)
+================================= */
+
+.faq-collapse .ant-collapse-header {
+  background: var(--color-bg-1) !important;
+  padding: 18px 20px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-.footer-text-muted {
-  color: #b5b5b5;
+/* ===============================
+   CONTENT (ANSWER)
+================================= */
+
+.faq-collapse .ant-collapse-content {
+  background: var(--color-bg-1) !important;
+  border: none !important;
 }
 
-.footer-heading {
-  color: #ffffff;
-  font-weight: 500;
+/* ANSWER INNER */
+.faq-collapse .ant-collapse-content-box {
+  padding: 16px 20px 20px !important;
 }
 
-.footer-divider {
-  height: 1px;
-  background-color: #2a2a2a;
+/* ===============================
+   REMOVE ANTD DEFAULT STYLES
+================================= */
+
+.ant-collapse,
+.ant-collapse-item,
+.ant-collapse-content {
+  border: none !important;
 }
 
-.footer-bottom {
-  border-top: 1px solid #2a2a2a;
+/* REMOVE LINE */
+.faq-collapse .ant-collapse-item::before {
+  display: none !important;
 }
 
-.card-bg {
-  background-color: var(--color-bg-1);
+/* ===============================
+   ACTIVE STATE FIX (NO BG JUMP)
+================================= */
+
+.faq-collapse .ant-collapse-item-active {
+  background-color: var(--color-bg-1) !important;
 }
 
-.card-bg-hover:hover {
-  background-color: var(--color-bg-1);
+.faq-collapse .ant-collapse-item-active > .ant-collapse-header,
+.faq-collapse .ant-collapse-item-active > .ant-collapse-content {
+  background-color: var(--color-bg-1) !important;
 }
 
+/* ===============================
+   ICON RIGHT
+================================= */
 
-.card-peach {
-  border: 2px solid #fedabc;
-  background: rgba(255, 243, 233, 0.3);
-  border-radius: 12px;
-  padding: 16px;
+.faq-collapse .ant-collapse-expand-icon {
+  margin-left: auto !important;
 }
 
-.card-green {
-  border: 2px solid #b3e8be;
-  background: rgba(230, 247, 233, 0.3);
-  border-radius: 12px;
-  padding: 16px;
-}
+/* ===============================
+   REMOVE SHADOW
+================================= */
 
-.card-purple {
-  border: 2px solid #e0e0ff;
-  background: rgba(245, 245, 255, 0.3);
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.text-primary {
-  color: #a93b40;
+.faq-collapse .ant-collapse-item-active {
+  box-shadow: none !important;
 }

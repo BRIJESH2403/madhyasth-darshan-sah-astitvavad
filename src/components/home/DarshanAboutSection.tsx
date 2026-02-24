@@ -2,7 +2,7 @@ import CtaButton from "@/components/ui/CTAButton";
 
 export default function DarshanAboutSection() {
   return (
-    <section className="w-full py-16 xl:py-24 px-4 xl:px-60 light-bg-1 dark-bg-1">
+    <section className="w-full py-16 xl:py-24 px-4 xl:px-60 bg-(--color-bg-1)">
       <div className="container">
         <div className="text-center px-4 xl:px-36">
           {/* TITLE */}

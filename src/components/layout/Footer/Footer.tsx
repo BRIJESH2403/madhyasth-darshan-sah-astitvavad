@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
 
   const linkClass =
-    "body-md footer footer-text-muted relative w-fit \
+    "body-md footer text-white/80 relative w-fit \
    bg-[linear-gradient(var(--color-primary),var(--color-primary))] \
    bg-[length:0%_2px] bg-no-repeat bg-left-bottom \
    transition-[background-size,color] duration-300 ease-out \
@@ -37,17 +37,17 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="footer-dark pt-16 pb-8">
+    <footer className="bg-[#0D0D0D] text-white pt-16 pb-8">
       <div className="container">
         {/* ================= TOP ROW ================= */}
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* LEFT */}
           <div className="max-w-xl">
-            <h3 className="body-2xl primary-color mb-4">
+            <h3 className="body-2xl text-(--color-primary)! mb-4">
               मध्यस्थ दर्शन सह-अस्तित्ववाद
             </h3>
 
-            <p className="body-lg footer-text-muted">
+            <p className="!text-[18px] !text-white/50 leading-relaxed">
               सह-अस्तित्व और जीवन विद्या का अध्ययन करने वाले बढ़ते समुदाय का
               हिस्सा बनें। नई पुस्तकों, कार्यशालाओं और संसाधनों की जानकारी सीधे
               अपने ईमेल पर प्राप्त करें।
@@ -58,14 +58,14 @@ const Footer: React.FC = () => {
           <div className="space-y-3 text-left md:text-right">
             <a
               href="mailto:info@madhyasthdarshan.org"
-              className={`${linkClass} block footer-text`}
+              className={`${linkClass} block text-white`}
             >
               info@madhyasthdarshan.org
             </a>
 
             <a
               href="tel:+919876543210"
-              className={`${linkClass} block footer-text`}
+              className={`${linkClass} block text-white`}
             >
               +91 98765 43210
             </a>
@@ -79,8 +79,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-6 gap-10">
           {/* ABOUT */}
           <div className="col-span-2">
-            <p className="body-lg footer-heading mb-3">हमारे बारे में</p>
-            <p className="body-md footer-text-muted">
+            <h4 className="body-lg footer-heading mb-3">हमारे बारे में</h4>
+            <p className="!text-[18px] !text-white/50 leading-relaxed">
               सह-अस्तित्व और जीवन विद्या का अध्ययन करने वाले बढ़ते समुदाय का
               हिस्सा बनें। नई पुस्तकों, कार्यशालाओं और संसाधनों की जानकारी सीधे
               अपने ईमेल पर प्राप्त करें।
@@ -192,7 +192,7 @@ const Footer: React.FC = () => {
 
         {/* ================= BOTTOM ================= */}
         <div className="mt-16 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="body-sm footer-text">
+          <p className="!text-[18px] !text-white/80 leading-relaxed">
             © 2025 मध्यस्थ दर्शन सह-अस्तित्ववाद, सर्वाधिकार सुरक्षित।
           </p>
 

@@ -103,32 +103,33 @@ export default function FaqSection() {
   }, []);
 
   return (
-    <section className="light-bg-2 dark-bg-2 py-20">
+    <section style={{ background: "var(--color-bg-2)" }} className="py-20">
       <div className="container">
         <h2 className="text-center mb-16">अध्ययन एवं संसाधन मुख्य बिंदु</h2>
 
         <Collapse
-          accordion
-          items={items}
-          expandIconPlacement="end"
-          className="faq-collapse "
-          expandIcon={({ isActive }) => (
-            <Image
-              src={
-                isDark
-                  ? isActive
-                    ? "/FAQsectionimg/Darkminus.png"
-                    : "/FAQsectionimg/DarkPlus.png"
-                  : isActive
-                    ? "/FAQsectionimg/minus.png"
-                    : "/FAQsectionimg/Plus.png"
-              }
-              alt="toggle icon"
-              width={30}
-              height={30}
-            />
-          )}
-        />
+  accordion
+  bordered={false}   // ✅ VERY IMPORTANT
+  items={items}
+  expandIconPlacement="end"
+  className="faq-collapse"
+  expandIcon={({ isActive }) => (
+    <Image
+      src={
+        isDark
+          ? isActive
+            ? "/FAQsectionimg/Darkminus.png"
+            : "/FAQsectionimg/DarkPlus.png"
+          : isActive
+            ? "/FAQsectionimg/minus.png"
+            : "/FAQsectionimg/Plus.png"
+      }
+      alt="toggle icon"
+      width={30}
+      height={30}
+    />
+  )}
+/>
       </div>
     </section>
   );

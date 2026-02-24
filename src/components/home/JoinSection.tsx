@@ -3,7 +3,7 @@ import CtaButton from "@/components/ui/CTAButton";
 
 export default function JoinSection() {
   return (
-    <section className="light-bg-2 dark-bg-2 py-20">
+    <section className="bg-(--color-bg-2) py-20">
       <div className="container">
         {/* MAIN TITLE (IMAGE + CONTENT KE UPAR) */}
         <h2 className="text-center mb-12">आइए जुड़ें</h2>

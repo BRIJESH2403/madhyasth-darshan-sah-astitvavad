@@ -31,7 +31,7 @@ const WorkshopsSection = () => {
   ];
 
   return (
-    <section className="light-bg-2 dark-bg-2 py-16">
+    <section className="bg-(--color-bg-2) py-16">
       <div className="container">
         <h2 className="text-center mb-12">
           कार्यशालाएँ, गोष्ठियाँ, अध्ययन-शोध कार्यक्रम

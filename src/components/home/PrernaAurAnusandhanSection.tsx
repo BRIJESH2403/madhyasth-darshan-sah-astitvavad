@@ -5,7 +5,7 @@ import CtaButton from "@/components/ui/CTAButton";
 
 export default function PrernaAurAnusandhanSection() {
   return (
-    <section className="w-full light-bg-2 dark-bg-2 py-20">
+    <section className="w-full bg-(--color-bg-2) py-20">
       {/* container applied here */}
       <div className="container">
         <div className="flex flex-col xl:flex-row items-center gap-10 xl:gap-20">
