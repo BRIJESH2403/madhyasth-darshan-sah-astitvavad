@@ -13,7 +13,7 @@ const darshanMenuItems: MegaMenuItem[] = [
     icon: "/AdhyayanSamgriimg/2.png",
     title: "चार्ट्स संग्रह (500 चार्ट्स)",
     desc: "शिक्षा का मानवीयकरण योजनाओं, स्वराज्य व्यवस्था योजना",
-    href: "/ChartsHome",
+    href: "/charts",
   },
   {
     icon: "/AdhyayanSamgriimg/3.png",
