@@ -391,23 +391,23 @@ interface LineProps {
 /* DATA */
 
 const leftNodes: NodeType[] = [
-  { id: "jeevaavastha", label: "जीवावस्था", image: "/Charts/1.png", x: 230, y: 95 },
-  { id: "padarthavastha", label: "पदार्थावस्था", image: "/Charts/2.png", x: 80, y: 255 },
-  { id: "pranaavastha", label: "प्राणावस्था", image: "/Charts/3.png", x: 230, y: 415 },
+  { id: "jeevaavastha", label: "जीवावस्था", image: "/Charts/8.png", x: 230, y: 95 },
+  { id: "padarthavastha", label: "पदार्थावस्था", image: "/Charts/7.png", x: 80, y: 255 },
+  { id: "pranaavastha", label: "प्राणावस्था", image: "/Charts/6.png", x: 230, y: 415 },
 ]
 
 const centerNode: NodeType = {
   id: "gyanavastha",
   label: "ज्ञानावस्था\nमानव",
-  image: "/Charts/4.png",
+  image: "/Charts/5.png",
   x: 410,
   y: 255,
 }
 
 const rightNodes: NodeType[] = [
-  { id: "samaj", label: "समाज", image: "/Charts/5.png", x: 590, y: 95 },
-  { id: "vishwa", label: "विश्व सर्वमानव", image: "/Charts/6.png", x: 740, y: 255 },
-  { id: "parivar", label: "परिवार", image: "/Charts/7.png", x: 590, y: 415 },
+  { id: "samaj", label: "समाज", image: "/Charts/4.png", x: 590, y: 95 },
+  { id: "vishwa", label: "विश्व सर्वमानव", image: "/Charts/2.png", x: 740, y: 255 },
+  { id: "parivar", label: "परिवार", image: "/Charts/3.png", x: 590, y: 415 },
 ]
 
 const CIRCLE_R = 52
@@ -629,7 +629,7 @@ export default function Chart01() {
           onClick={() => setSelectedNode(null)}
         >
           <div
-            className="bg-white w-105 rounded-2xl shadow-2xl p-6 relative border"
+            className="bg-(--color-bg-2) w-105 rounded-2xl shadow-2xl p-6 relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
