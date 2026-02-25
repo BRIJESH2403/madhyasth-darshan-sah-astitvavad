@@ -20,7 +20,7 @@ export default function ChartTabs() {
               ${
                 active === index
                   ? "text-(--color-primary) border-b-2 border-(--color-primary)"
-                  : "text-(--color-text-muted) hover:text-(--color-text-title)"
+                  : "text-(--color-text-title) hover:text-(--color-text-title)"
               }
             `}
           >
