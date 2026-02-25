@@ -7,22 +7,27 @@ export default function ChartTabs() {
   const [active, setActive] = useState(0)
 
   return (
-    <div className="flex bg-(--color-bg-1)">
-      {tabs.map((tab, index) => (
-        <button
-          key={index}
-          onClick={() => setActive(index)}
-          className={`w-120 h-15 py-4 text-sm font-semibold tracking-wide transition-all duration-200
-            ${
-              active === index
-                ? "text-(--color-primary) border-b-2 border-(--color-primary)"
-                : "text-(--color-text-muted) hover:text-(--color-text-title)"
-            }
-          `}
-        >
-          {tab}
-        </button>
-      ))}
+    <div className="w-full bg-(--color-bg-1)">
+      <div className="flex flex-wrap sm:flex-nowrap w-full">
+        {tabs.map((tab, index) => (
+          <button
+            key={index}
+            onClick={() => setActive(index)}
+            className={`
+              flex-1 min-w-30 py-3 sm:py-4
+              text-xs sm:text-sm font-semibold tracking-wide
+              transition-all duration-200
+              ${
+                active === index
+                  ? "text-(--color-primary) border-b-2 border-(--color-primary)"
+                  : "text-(--color-text-muted) hover:text-(--color-text-title)"
+              }
+            `}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }

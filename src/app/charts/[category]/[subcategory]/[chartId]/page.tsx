@@ -39,8 +39,9 @@ export default async function ChartDetailPage({
 
       <ChartHeader title={formattedSlug} />
 
-      <section className="bg-(--color-bg-2) min-h-screen flex justify-center items-center">
-        <div className="w-full mx-60 mb-20 rounded-2xl bg-white shadow-lg flex flex-col overflow-hidden">
+<section className="min-h-screen bg-(--color-bg-2)">
+  <div >
+    <div className=" bg-white shadow-lg overflow-hidden">
 
           <ChartTabs />
 
@@ -48,8 +49,9 @@ export default async function ChartDetailPage({
 
           <ChartFooter />
 
-        </div>
-      </section>
+         </div>
+  </div>
+</section>
     </>
   )
 }

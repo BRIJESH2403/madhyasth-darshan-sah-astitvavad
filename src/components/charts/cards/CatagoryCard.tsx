@@ -10,7 +10,7 @@ interface CatagotyCardProps {
   description: string;
   progressText: string;
   href: string;
-  progressPercent?: number; // 🔥 NEW
+  progressPercent?: number; 
 }
 
 export default function CatagotyCard({
@@ -19,7 +19,7 @@ export default function CatagotyCard({
   description,
   progressText,
   href,
-  progressPercent = 0, // default
+  progressPercent = 0, 
 }: CatagotyCardProps) {
   const router = useRouter();
 
@@ -66,7 +66,7 @@ export default function CatagotyCard({
           <span>{progressText}</span>
         </div>
 
-        {/* 🔥 DYNAMIC PROGRESS BAR */}
+        {/* DYNAMIC PROGRESS BAR */}
         <div className="w-full h-2 bg-white/30 rounded-full overflow-hidden">
           <div
             className="h-full bg-white rounded-full transition-all duration-500"

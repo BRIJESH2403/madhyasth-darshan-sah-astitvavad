@@ -5,12 +5,13 @@ import ZoomControls from "./ZoomControls"
 import Chart01 from "@/components/charts/custom/Chart01"
 import Chart02 from "@/components/charts/custom/Chart02"
 
+
 type Props = {
   chartId: string
 }
 
 export default function ChartCanvas({ chartId }: Props) {
-  const [scale, setScale] = useState(0.5)
+  const [scale, setScale] = useState(0.7)
   const [positionState, setPositionState] = useState({ x: 0, y: 0 })
 
   const positionRef = useRef({ x: 0, y: 0 })
@@ -70,7 +71,7 @@ export default function ChartCanvas({ chartId }: Props) {
   }
 
   return (
-    <div className="w-full h-150 bg-(--color-bg-1) relative overflow-hidden">
+    <div className="w-full h-250 bg-(--color-bg-1) relative overflow-hidden">
       <div
         className="w-full h-full cursor-grab active:cursor-grabbing"
         onMouseDown={handleMouseDown}

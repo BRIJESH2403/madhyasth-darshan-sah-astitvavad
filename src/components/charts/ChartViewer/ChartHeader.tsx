@@ -16,7 +16,7 @@ export default function ChartHeader({ title }: ChartHeaderProps) {
       {/* Back Button */}
       <button
         onClick={() => router.back()}
-        className="p-2 rounded-md transition hover:bg-(--color-bg-1)"
+        className="p-2 transition hover:bg-(--color-bg-1)"
       >
         <ArrowLeft className="w-5 h-5 text-(--color-text-body)" />
       </button>
