@@ -1,6 +1,6 @@
 export default function ChartFooter() {
   return (
-    <div className="bg-(--color-bg-1) flex justify-end items-center gap-4 p-6 ">
+    <div className="bg-(--color-bg-2) flex justify-end items-center gap-4 p-6 ">
 
       {/* Simple Text Button */}
       <button className="text-sm font-semibold tracking-widest text-(--color-text-body) hover:text-(--color-text-title) transition-colors">

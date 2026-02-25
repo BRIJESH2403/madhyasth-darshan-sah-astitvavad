@@ -8,7 +8,7 @@ interface BreadcrumbItem {
 
 export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
   return (
-    <div className="w-full light-bg-1 border-b border-(--border-color) py-4 px-6">
+    <div className="w-full light-bg-1 py-4 px-6">
       <div className="container flex flex-wrap items-center">
 
         {items.map((item, index) => {

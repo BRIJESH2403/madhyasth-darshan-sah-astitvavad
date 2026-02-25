@@ -7,7 +7,7 @@ export default function ChartTabs() {
   const [active, setActive] = useState(0)
 
   return (
-    <div className="w-full bg-(--color-bg-1)">
+    <div className="w-full bg-(--color-bg-2)">
       <div className="flex flex-wrap sm:flex-nowrap w-full">
         {tabs.map((tab, index) => (
           <button

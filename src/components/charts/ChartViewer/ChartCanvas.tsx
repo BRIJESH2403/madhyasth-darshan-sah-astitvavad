@@ -71,7 +71,7 @@ export default function ChartCanvas({ chartId }: Props) {
   }
 
   return (
-    <div className="w-full h-250 bg-(--color-bg-1) relative overflow-hidden">
+    <div className="w-full h-250 bg-(--color-bg-2) relative overflow-hidden">
       <div
         className="w-full h-full cursor-grab active:cursor-grabbing"
         onMouseDown={handleMouseDown}
