@@ -4,7 +4,7 @@ import { JSX, useState, useRef } from "react"
 import ZoomControls from "./ZoomControls"
 import Chart01 from "@/components/charts/custom/Chart01"
 import Chart02 from "@/components/charts/custom/Chart02"
-
+import Chart03 from "@/components/charts/custom/Chart03"
 
 type Props = {
   chartId: string
@@ -30,6 +30,7 @@ export default function ChartCanvas({ chartId }: Props) {
   const charts: Record<string, JSX.Element> = {
     chart01: <Chart01 />,
     chart02: <Chart02 />,
+    chart03: <Chart03 />,
   }
 
   const ActiveChart =
@@ -45,7 +46,7 @@ export default function ChartCanvas({ chartId }: Props) {
 
     frame.current = requestAnimationFrame(() => {
       positionRef.current = { x, y }
-      setPositionState({ x, y }) // safe render value
+      setPositionState({ x, y }) 
     })
   }
 

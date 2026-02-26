@@ -41,7 +41,7 @@ export default async function ChartDetailPage({
 
 <section className="min-h-screen bg-(--color-bg-2)">
   <div >
-    <div className=" bg-white shadow-lg overflow-hidden">
+    <div className=" shadow-lg overflow-hidden">
 
           <ChartTabs />
 
